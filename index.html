@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>My PWA</title>
+<link rel="manifest" href="manifest.json">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<!--  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+<!--  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+  <link rel="stylesheet" type="text/css" href="style.css"  />
+
+
+</head>
+
+<body>
+    <script src="app.js"></script>
+    <div class="container">
+        <h1 style="color: red"> <b>About PWA</b></h1>
+<p>
+    A Progressive Web App (PWA) is an app that uses modern Web capabilities to offer users a very similar experience to a native app.
+ The term “progressive” refers to the fact that they introduce new features and, from the user experience’s point of view, they are initially
+    perceived as normal websites but progressively behave more like mobile apps, among other things multiplatform. Progressive web apps are a hybrid between regular web pages and mobile applications.</p>
+        <br>
+
+    <script>
+
+function changeColor(el) {
+  document.body.style.backgroundColor = el.value;
+}
+    </script>
+    <script src="app.js"></script>
+
+
+
+<h3 style="color: red; text-align:center">
+         My PWA
+    </h3>
+
+
+<form  name="colorForm"  style="text-align:center" >Choose background:
+    <select name="color" id="colors">
+        <option value="#FFFFFF" selected="selected"> White (Default)       </option>
+        <option value="images/lightblue.jpg"> Blue </option>
+        <option value="images/lightgold.jpg"> Gold </option>
+
+    </select>
+</form>
+<br>
+        <br>
+        <h3><b>How PWAs Work</b></h3>
+
+<p>This rich experience of PWAs is powered by three strong pillars: the service worker, application shell, and the web app manifest.</p>
+
+        <h5><b>Service Worker</b></h5>
+<p>A service worker is a type of script that keeps running in the background, which serves as a gateway to features that don’t require a web page or user interaction.
+
+The core feature of the service worker is the ability to manage the cache of responses.
+
+    It gives the app the ability of intercepting network requests, managing multiple caches, and reducing data traffic. It also helps in saving user-generated data online.</p>
+
+        <h5><b>Application Shell</b></h5>
+<p>An applcation shell is the framework of the user interface that loads on your user screen once you open the application.
+
+The app shell provides interactions and navigations similar to a native app.
+    </p>
+        <h5><b>Web App Manifest</b></h5>
+<p>A web app manifest gives information (i.e., icon, name, author, and description) about an app in a JSON text file. It shows the developers how a PWA appears in areas in the device where the user expects to see them, such as the home screen.
+
+        </p>
+<script>
+$(function () {
+    $('#colors').on('change', function () {
+        var Img = $('option:selected', this).val();
+        $('body').css('background-image', 'url(' + Img + ')');
+    });
+});
+
+</script>
+
+    </div>
+</body>
+</html>
